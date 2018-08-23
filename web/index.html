@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>schmonk</title>
+  </head>
+  <body>
+    <h3>Welcome to schmonk.io!</h3>
+    <div id="stats">
+      Status: <span id="status" >Connecting..</span>
+    </div>
+    <div id="game"></div>
+    <script src="js/vendor/crafty.js"></script>
+    <script src="js/schmonkclient.js"></script>
+    <script>
+      let name = prompt("What's your name?");
+      new SchmonkClient({
+        domElId: "game",
+        statusDomElId: "status",
+        socketUrl: "ws://172.20.192.217:8080/ws",
+        playerName:  name 
+      });
+    </script>
+  </body>
+</html>
