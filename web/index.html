@@ -16,7 +16,7 @@
       new SchmonkClient({
         domElId: "game",
         statusDomElId: "status",
-        socketUrl: "ws://172.20.192.217:8080/ws",
+        socketUrl: window.location.href.replace("http", "ws") + "ws",
         playerName:  name 
       });
     </script>

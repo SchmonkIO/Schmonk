@@ -1,15 +1,3 @@
-package web
-
-import (
-	"html/template"
-	"net/http"
-)
-
-func Load(w http.ResponseWriter, r *http.Request) {
-	UITemplate.Execute(w, "ws://"+r.Host+"/ws")
-}
-
-var UITemplate = template.Must(template.New("").Parse(`
 <!DOCTYPE html>
 <html>
 <head>
@@ -138,4 +126,3 @@ You can change the message and send multiple times.
 </td></tr></table>
 </body>
 </html>
-`))
